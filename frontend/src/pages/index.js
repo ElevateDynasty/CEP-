@@ -1,0 +1,7 @@
+export { default as HomePage } from './HomePage';
+export { default as IdentifyPage } from './IdentifyPage';
+export { default as ExplorePage } from './ExplorePage';
+export { default as BreedDetailPage } from './BreedDetailPage';
+export { default as ComparePage } from './ComparePage';
+export { default as MapPage } from './MapPage';
+export { default as SchemesPage } from './SchemesPage';

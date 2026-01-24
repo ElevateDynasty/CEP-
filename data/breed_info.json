@@ -1,0 +1,1045 @@
+{
+  "cattle": {
+    "gir": {
+      "name": "Gir",
+      "nameHindi": "गिर",
+      "type": "cattle",
+      "nativeState": ["Gujarat"],
+      "nativeRegion": "Gir forest area of Gujarat",
+      "characteristics": {
+        "color": "Red to spotted white",
+        "horns": "Curved, tilted backward",
+        "ears": "Long, pendulous",
+        "forehead": "Prominent, convex"
+      },
+      "productivity": {
+        "milkYieldPerDay": "12-15 liters",
+        "lactationYield": "2500-3500 liters",
+        "fatContent": "4.5-5.0%",
+        "lactationPeriod": "300-320 days"
+      },
+      "sustainability": {
+        "carbonFootprint": "Low",
+        "carbonScore": 85,
+        "heatTolerance": "Excellent",
+        "diseaseResistance": "High",
+        "feedEfficiency": "Good",
+        "climateAdaptability": "Hot and humid"
+      },
+      "economicValue": {
+        "purchaseCost": "₹50,000 - ₹1,50,000",
+        "maintenanceCost": "₹200-300/day",
+        "marketDemand": "Very High"
+      },
+      "population": {
+        "status": "Increasing",
+        "trend": "positive",
+        "conservationStatus": "Not Endangered"
+      },
+      "bestFor": ["Dairy farming", "Hot climate regions", "Cross-breeding programs"],
+      "governmentSchemes": ["Rashtriya Gokul Mission", "Gir Gauvansh Sanvardhan Yojana"],
+      "funFact": "Gir cattle have been exported to Brazil, where they adapted so well that Brazil now has the largest Gir population outside India.",
+      "image": "/breeds/gir.jpg"
+    },
+    "sahiwal": {
+      "name": "Sahiwal",
+      "nameHindi": "साहीवाल",
+      "type": "cattle",
+      "nativeState": ["Punjab", "Rajasthan"],
+      "nativeRegion": "Montgomery district (now in Pakistan) and Punjab",
+      "characteristics": {
+        "color": "Reddish brown to dark brown",
+        "horns": "Short, stumpy",
+        "ears": "Medium, drooping",
+        "forehead": "Broad"
+      },
+      "productivity": {
+        "milkYieldPerDay": "10-16 liters",
+        "lactationYield": "2000-4000 liters",
+        "fatContent": "4.5-5.5%",
+        "lactationPeriod": "290-310 days"
+      },
+      "sustainability": {
+        "carbonFootprint": "Low",
+        "carbonScore": 88,
+        "heatTolerance": "Excellent",
+        "diseaseResistance": "Very High",
+        "feedEfficiency": "Excellent",
+        "climateAdaptability": "Hot and dry"
+      },
+      "economicValue": {
+        "purchaseCost": "₹60,000 - ₹2,00,000",
+        "maintenanceCost": "₹250-350/day",
+        "marketDemand": "Very High"
+      },
+      "population": {
+        "status": "Stable",
+        "trend": "stable",
+        "conservationStatus": "Not Endangered"
+      },
+      "bestFor": ["Dairy farming", "Low-input systems", "Tick resistance"],
+      "governmentSchemes": ["Rashtriya Gokul Mission", "National Livestock Mission"],
+      "funFact": "Sahiwal is considered the best indigenous dairy breed of India and is highly prized for its docile temperament.",
+      "image": "/breeds/sahiwal.jpg"
+    },
+    "red_sindhi": {
+      "name": "Red Sindhi",
+      "nameHindi": "लाल सिंधी",
+      "type": "cattle",
+      "nativeState": ["Gujarat", "Rajasthan"],
+      "nativeRegion": "Sindh region (now in Pakistan) and Kutch",
+      "characteristics": {
+        "color": "Deep red to dark red",
+        "horns": "Thick at base, curving upward",
+        "ears": "Medium, semi-pendulous",
+        "forehead": "Slightly prominent"
+      },
+      "productivity": {
+        "milkYieldPerDay": "8-12 liters",
+        "lactationYield": "1800-2500 liters",
+        "fatContent": "4.5-5.0%",
+        "lactationPeriod": "270-300 days"
+      },
+      "sustainability": {
+        "carbonFootprint": "Very Low",
+        "carbonScore": 90,
+        "heatTolerance": "Excellent",
+        "diseaseResistance": "Very High",
+        "feedEfficiency": "Excellent",
+        "climateAdaptability": "Hot and dry, tropical"
+      },
+      "economicValue": {
+        "purchaseCost": "₹40,000 - ₹1,00,000",
+        "maintenanceCost": "₹150-250/day",
+        "marketDemand": "High"
+      },
+      "population": {
+        "status": "Stable",
+        "trend": "stable",
+        "conservationStatus": "Not Endangered"
+      },
+      "bestFor": ["Tropical regions", "Low maintenance farming", "Cross-breeding"],
+      "governmentSchemes": ["Rashtriya Gokul Mission"],
+      "funFact": "Red Sindhi cattle have been exported to over 40 countries due to their heat tolerance and disease resistance.",
+      "image": "/breeds/red_sindhi.jpg"
+    },
+    "tharparkar": {
+      "name": "Tharparkar",
+      "nameHindi": "थारपारकर",
+      "type": "cattle",
+      "nativeState": ["Rajasthan"],
+      "nativeRegion": "Thar desert region of Rajasthan",
+      "characteristics": {
+        "color": "White to light grey",
+        "horns": "Medium, curved upward and outward",
+        "ears": "Medium, alert",
+        "forehead": "Flat to slightly convex"
+      },
+      "productivity": {
+        "milkYieldPerDay": "8-12 liters",
+        "lactationYield": "1800-2500 liters",
+        "fatContent": "4.5%",
+        "lactationPeriod": "280-300 days"
+      },
+      "sustainability": {
+        "carbonFootprint": "Very Low",
+        "carbonScore": 92,
+        "heatTolerance": "Exceptional",
+        "diseaseResistance": "High",
+        "feedEfficiency": "Excellent",
+        "climateAdaptability": "Desert, extreme heat"
+      },
+      "economicValue": {
+        "purchaseCost": "₹35,000 - ₹80,000",
+        "maintenanceCost": "₹150-200/day",
+        "marketDemand": "High"
+      },
+      "population": {
+        "status": "Declining",
+        "trend": "negative",
+        "conservationStatus": "Vulnerable"
+      },
+      "bestFor": ["Arid regions", "Dual purpose (milk + draught)", "Low water availability areas"],
+      "governmentSchemes": ["Rashtriya Gokul Mission", "Desert Development Programme"],
+      "funFact": "Tharparkar cattle can survive on minimal water and sparse vegetation, making them perfectly adapted to desert conditions.",
+      "image": "/breeds/tharparkar.jpg"
+    },
+    "kankrej": {
+      "name": "Kankrej",
+      "nameHindi": "कांकरेज",
+      "type": "cattle",
+      "nativeState": ["Gujarat", "Rajasthan"],
+      "nativeRegion": "Kankrej taluka of Banaskantha district, Gujarat",
+      "characteristics": {
+        "color": "Silver grey to steel grey",
+        "horns": "Strong, lyre-shaped",
+        "ears": "Large, pendulous",
+        "forehead": "Broad, slightly dished"
+      },
+      "productivity": {
+        "milkYieldPerDay": "5-8 liters",
+        "lactationYield": "1200-1800 liters",
+        "fatContent": "4.2-4.5%",
+        "lactationPeriod": "250-280 days"
+      },
+      "sustainability": {
+        "carbonFootprint": "Low",
+        "carbonScore": 80,
+        "heatTolerance": "Excellent",
+        "diseaseResistance": "High",
+        "feedEfficiency": "Good",
+        "climateAdaptability": "Hot and dry"
+      },
+      "economicValue": {
+        "purchaseCost": "₹30,000 - ₹70,000",
+        "maintenanceCost": "₹150-250/day",
+        "marketDemand": "Medium-High"
+      },
+      "population": {
+        "status": "Stable",
+        "trend": "stable",
+        "conservationStatus": "Not Endangered"
+      },
+      "bestFor": ["Draught purpose", "Agricultural work", "Dual purpose farming"],
+      "governmentSchemes": ["Rashtriya Gokul Mission"],
+      "funFact": "Kankrej bullocks are famous for their endurance and can work for long hours in hot conditions without fatigue.",
+      "image": "/breeds/kankrej.jpg"
+    },
+    "ongole": {
+      "name": "Ongole",
+      "nameHindi": "ओंगोल",
+      "type": "cattle",
+      "nativeState": ["Andhra Pradesh"],
+      "nativeRegion": "Ongole taluk of Prakasam district",
+      "characteristics": {
+        "color": "White to grey-white",
+        "horns": "Short, stumpy",
+        "ears": "Medium, slightly drooping",
+        "forehead": "Broad, prominent"
+      },
+      "productivity": {
+        "milkYieldPerDay": "5-8 liters",
+        "lactationYield": "1000-1500 liters",
+        "fatContent": "4.0-4.5%",
+        "lactationPeriod": "240-270 days"
+      },
+      "sustainability": {
+        "carbonFootprint": "Low",
+        "carbonScore": 78,
+        "heatTolerance": "Excellent",
+        "diseaseResistance": "High",
+        "feedEfficiency": "Good",
+        "climateAdaptability": "Hot and humid, tropical"
+      },
+      "economicValue": {
+        "purchaseCost": "₹40,000 - ₹1,00,000",
+        "maintenanceCost": "₹180-280/day",
+        "marketDemand": "High"
+      },
+      "population": {
+        "status": "Declining",
+        "trend": "negative",
+        "conservationStatus": "Vulnerable"
+      },
+      "bestFor": ["Draught purpose", "Meat production", "Cross-breeding"],
+      "governmentSchemes": ["Rashtriya Gokul Mission", "AP State Livestock Mission"],
+      "funFact": "Ongole cattle were exported to Brazil where they formed the basis of the famous Nelore breed, now the most common beef cattle in Brazil.",
+      "image": "/breeds/ongole.jpg"
+    },
+    "hariana": {
+      "name": "Hariana",
+      "nameHindi": "हरियाणा",
+      "type": "cattle",
+      "nativeState": ["Haryana", "Uttar Pradesh"],
+      "nativeRegion": "Rohtak, Hisar, Gurgaon districts of Haryana",
+      "characteristics": {
+        "color": "White to light grey",
+        "horns": "Short, blunt",
+        "ears": "Small, horizontal",
+        "forehead": "Flat, broad"
+      },
+      "productivity": {
+        "milkYieldPerDay": "6-10 liters",
+        "lactationYield": "1400-2200 liters",
+        "fatContent": "4.0-4.5%",
+        "lactationPeriod": "270-300 days"
+      },
+      "sustainability": {
+        "carbonFootprint": "Low",
+        "carbonScore": 82,
+        "heatTolerance": "Good",
+        "diseaseResistance": "High",
+        "feedEfficiency": "Good",
+        "climateAdaptability": "Semi-arid"
+      },
+      "economicValue": {
+        "purchaseCost": "₹25,000 - ₹60,000",
+        "maintenanceCost": "₹150-220/day",
+        "marketDemand": "Medium"
+      },
+      "population": {
+        "status": "Declining",
+        "trend": "negative",
+        "conservationStatus": "Vulnerable"
+      },
+      "bestFor": ["Dual purpose", "Agricultural work", "Semi-arid regions"],
+      "governmentSchemes": ["Rashtriya Gokul Mission", "Haryana State Dairy Development"],
+      "funFact": "Hariana bullocks were traditionally used by the Indian Army for transport due to their strength and endurance.",
+      "image": "/breeds/hariana.jpg"
+    },
+    "rathi": {
+      "name": "Rathi",
+      "nameHindi": "राठी",
+      "type": "cattle",
+      "nativeState": ["Rajasthan"],
+      "nativeRegion": "Bikaner, Ganganagar districts of Rajasthan",
+      "characteristics": {
+        "color": "Brown with white patches",
+        "horns": "Medium, curved outward",
+        "ears": "Medium, semi-pendulous",
+        "forehead": "Slightly prominent"
+      },
+      "productivity": {
+        "milkYieldPerDay": "8-12 liters",
+        "lactationYield": "1800-2500 liters",
+        "fatContent": "4.5-5.0%",
+        "lactationPeriod": "280-300 days"
+      },
+      "sustainability": {
+        "carbonFootprint": "Low",
+        "carbonScore": 85,
+        "heatTolerance": "Excellent",
+        "diseaseResistance": "Very High",
+        "feedEfficiency": "Good",
+        "climateAdaptability": "Semi-arid, desert fringe"
+      },
+      "economicValue": {
+        "purchaseCost": "₹40,000 - ₹90,000",
+        "maintenanceCost": "₹180-260/day",
+        "marketDemand": "High"
+      },
+      "population": {
+        "status": "Stable",
+        "trend": "stable",
+        "conservationStatus": "Not Endangered"
+      },
+      "bestFor": ["Dairy farming", "Arid regions", "Disease resistance"],
+      "governmentSchemes": ["Rashtriya Gokul Mission"],
+      "funFact": "Rathi cattle are believed to be a cross between Sahiwal and local desert breeds, combining good milk production with heat tolerance.",
+      "image": "/breeds/rathi.jpg"
+    },
+    "deoni": {
+      "name": "Deoni",
+      "nameHindi": "देवणी",
+      "type": "cattle",
+      "nativeState": ["Maharashtra", "Karnataka"],
+      "nativeRegion": "Latur district of Maharashtra and Bidar district of Karnataka",
+      "characteristics": {
+        "color": "White with black spots on face",
+        "horns": "Short, thick",
+        "ears": "Medium, horizontal",
+        "forehead": "Broad, flat"
+      },
+      "productivity": {
+        "milkYieldPerDay": "6-10 liters",
+        "lactationYield": "1200-2000 liters",
+        "fatContent": "4.2-4.8%",
+        "lactationPeriod": "260-290 days"
+      },
+      "sustainability": {
+        "carbonFootprint": "Low",
+        "carbonScore": 80,
+        "heatTolerance": "Good",
+        "diseaseResistance": "High",
+        "feedEfficiency": "Good",
+        "climateAdaptability": "Semi-arid, Deccan plateau"
+      },
+      "economicValue": {
+        "purchaseCost": "₹30,000 - ₹70,000",
+        "maintenanceCost": "₹150-230/day",
+        "marketDemand": "Medium"
+      },
+      "population": {
+        "status": "Declining",
+        "trend": "negative",
+        "conservationStatus": "Endangered"
+      },
+      "bestFor": ["Dual purpose", "Deccan region farming", "Draught work"],
+      "governmentSchemes": ["Rashtriya Gokul Mission", "Maharashtra State Cattle Breeding Policy"],
+      "funFact": "Deoni cattle are known for their distinctive spotted pattern and were traditionally maintained by the Dhangar community.",
+      "image": "/breeds/deoni.jpg"
+    },
+    "khillari": {
+      "name": "Khillari",
+      "nameHindi": "खिल्लारी",
+      "type": "cattle",
+      "nativeState": ["Maharashtra", "Karnataka"],
+      "nativeRegion": "Satara, Sangli, Solapur districts of Maharashtra",
+      "characteristics": {
+        "color": "Grey-white to iron grey",
+        "horns": "Long, pointed",
+        "ears": "Small, pointed",
+        "forehead": "Narrow, elongated"
+      },
+      "productivity": {
+        "milkYieldPerDay": "2-4 liters",
+        "lactationYield": "500-900 liters",
+        "fatContent": "4.0-4.5%",
+        "lactationPeriod": "200-250 days"
+      },
+      "sustainability": {
+        "carbonFootprint": "Very Low",
+        "carbonScore": 88,
+        "heatTolerance": "Excellent",
+        "diseaseResistance": "High",
+        "feedEfficiency": "Excellent",
+        "climateAdaptability": "Semi-arid, hilly"
+      },
+      "economicValue": {
+        "purchaseCost": "₹20,000 - ₹50,000",
+        "maintenanceCost": "₹120-180/day",
+        "marketDemand": "Low-Medium"
+      },
+      "population": {
+        "status": "Declining",
+        "trend": "negative",
+        "conservationStatus": "Vulnerable"
+      },
+      "bestFor": ["Draught purpose", "Hilly terrain work", "Racing (traditional)"],
+      "governmentSchemes": ["Rashtriya Gokul Mission"],
+      "funFact": "Khillari bullocks are famous for their speed and are used in traditional bullock cart races in Maharashtra.",
+      "image": "/breeds/khillari.jpg"
+    },
+    "kangayam": {
+      "name": "Kangayam",
+      "nameHindi": "कांगायम",
+      "type": "cattle",
+      "nativeState": ["Tamil Nadu"],
+      "nativeRegion": "Kangayam, Dharapuram, Perundurai taluks of Tamil Nadu",
+      "characteristics": {
+        "color": "Grey to white",
+        "horns": "Long, spreading outward",
+        "ears": "Small, erect",
+        "forehead": "Broad, flat"
+      },
+      "productivity": {
+        "milkYieldPerDay": "2-5 liters",
+        "lactationYield": "500-1000 liters",
+        "fatContent": "4.0-4.5%",
+        "lactationPeriod": "200-250 days"
+      },
+      "sustainability": {
+        "carbonFootprint": "Very Low",
+        "carbonScore": 90,
+        "heatTolerance": "Excellent",
+        "diseaseResistance": "Very High",
+        "feedEfficiency": "Excellent",
+        "climateAdaptability": "Hot and dry, tropical"
+      },
+      "economicValue": {
+        "purchaseCost": "₹25,000 - ₹60,000",
+        "maintenanceCost": "₹130-200/day",
+        "marketDemand": "Medium"
+      },
+      "population": {
+        "status": "Stable",
+        "trend": "stable",
+        "conservationStatus": "Not Endangered"
+      },
+      "bestFor": ["Draught purpose", "Agricultural work", "Traditional farming"],
+      "governmentSchemes": ["Rashtriya Gokul Mission", "TN State Animal Husbandry Dept"],
+      "funFact": "Kangayam cattle are known for their compact muscular build and can work continuously for 6-8 hours in hot conditions.",
+      "image": "/breeds/kangayam.jpg"
+    },
+    "hallikar": {
+      "name": "Hallikar",
+      "nameHindi": "हल्लीकर",
+      "type": "cattle",
+      "nativeState": ["Karnataka"],
+      "nativeRegion": "Mysore, Tumkur, Hassan districts of Karnataka",
+      "characteristics": {
+        "color": "Grey to dark grey",
+        "horns": "Long, lyrate shape",
+        "ears": "Small, erect",
+        "forehead": "Narrow, prominent"
+      },
+      "productivity": {
+        "milkYieldPerDay": "2-4 liters",
+        "lactationYield": "450-800 liters",
+        "fatContent": "4.0-4.5%",
+        "lactationPeriod": "180-220 days"
+      },
+      "sustainability": {
+        "carbonFootprint": "Very Low",
+        "carbonScore": 92,
+        "heatTolerance": "Excellent",
+        "diseaseResistance": "High",
+        "feedEfficiency": "Excellent",
+        "climateAdaptability": "Hot and dry"
+      },
+      "economicValue": {
+        "purchaseCost": "₹20,000 - ₹45,000",
+        "maintenanceCost": "₹100-160/day",
+        "marketDemand": "Low-Medium"
+      },
+      "population": {
+        "status": "Declining",
+        "trend": "negative",
+        "conservationStatus": "Vulnerable"
+      },
+      "bestFor": ["Draught purpose", "Road transport", "Hilly terrain"],
+      "governmentSchemes": ["Rashtriya Gokul Mission", "Karnataka Livestock Development Agency"],
+      "funFact": "Hallikar bullocks are considered the best draught animals in South India and can pull heavy loads over long distances.",
+      "image": "/breeds/hallikar.jpg"
+    },
+    "amritmahal": {
+      "name": "Amritmahal",
+      "nameHindi": "अमृतमहल",
+      "type": "cattle",
+      "nativeState": ["Karnataka"],
+      "nativeRegion": "Chitradurga, Chikmagalur, Shimoga districts of Karnataka",
+      "characteristics": {
+        "color": "Grey to white",
+        "horns": "Long, curved, meeting at tips",
+        "ears": "Small, pointed",
+        "forehead": "Narrow"
+      },
+      "productivity": {
+        "milkYieldPerDay": "1-3 liters",
+        "lactationYield": "300-600 liters",
+        "fatContent": "4.0-4.5%",
+        "lactationPeriod": "150-200 days"
+      },
+      "sustainability": {
+        "carbonFootprint": "Very Low",
+        "carbonScore": 94,
+        "heatTolerance": "Excellent",
+        "diseaseResistance": "Very High",
+        "feedEfficiency": "Excellent",
+        "climateAdaptability": "Semi-arid"
+      },
+      "economicValue": {
+        "purchaseCost": "₹15,000 - ₹35,000",
+        "maintenanceCost": "₹80-140/day",
+        "marketDemand": "Low"
+      },
+      "population": {
+        "status": "Declining",
+        "trend": "negative",
+        "conservationStatus": "Endangered"
+      },
+      "bestFor": ["Draught purpose", "Military transport (historical)", "Conservation"],
+      "governmentSchemes": ["Rashtriya Gokul Mission", "Karnataka State Conservation Programme"],
+      "funFact": "Amritmahal cattle were bred by Hyder Ali and Tipu Sultan for their army. The name means 'Department of Nectar' referring to royal dairy farms.",
+      "image": "/breeds/amritmahal.jpg"
+    },
+    "punganur": {
+      "name": "Punganur",
+      "nameHindi": "पुंगनूर",
+      "type": "cattle",
+      "nativeState": ["Andhra Pradesh"],
+      "nativeRegion": "Punganur and Vayalpadu mandals of Chittoor district",
+      "characteristics": {
+        "color": "White, light grey, fawn",
+        "horns": "Very small or absent",
+        "ears": "Small, horizontal",
+        "forehead": "Broad"
+      },
+      "productivity": {
+        "milkYieldPerDay": "3-5 liters",
+        "lactationYield": "700-1000 liters",
+        "fatContent": "5.0-8.0%",
+        "lactationPeriod": "200-240 days"
+      },
+      "sustainability": {
+        "carbonFootprint": "Very Low",
+        "carbonScore": 96,
+        "heatTolerance": "Good",
+        "diseaseResistance": "High",
+        "feedEfficiency": "Excellent",
+        "climateAdaptability": "Tropical"
+      },
+      "economicValue": {
+        "purchaseCost": "₹50,000 - ₹2,00,000",
+        "maintenanceCost": "₹80-120/day",
+        "marketDemand": "Very High (rare breed)"
+      },
+      "population": {
+        "status": "Critical",
+        "trend": "negative",
+        "conservationStatus": "Critically Endangered"
+      },
+      "bestFor": ["Small farms", "Urban dairy", "Conservation breeding"],
+      "governmentSchemes": ["Rashtriya Gokul Mission", "AP Punganur Conservation Programme"],
+      "funFact": "Punganur is one of the world's smallest cattle breeds, standing only 70-90 cm tall, making them ideal for small holdings.",
+      "image": "/breeds/punganur.jpg"
+    },
+    "vechur": {
+      "name": "Vechur",
+      "nameHindi": "वेचुर",
+      "type": "cattle",
+      "nativeState": ["Kerala"],
+      "nativeRegion": "Vechur village in Kottayam district, Kerala",
+      "characteristics": {
+        "color": "Black, brown, red, white",
+        "horns": "Very small",
+        "ears": "Small, horizontal",
+        "forehead": "Narrow"
+      },
+      "productivity": {
+        "milkYieldPerDay": "2-3 liters",
+        "lactationYield": "500-700 liters",
+        "fatContent": "5.5-7.0%",
+        "lactationPeriod": "180-220 days"
+      },
+      "sustainability": {
+        "carbonFootprint": "Very Low",
+        "carbonScore": 98,
+        "heatTolerance": "Excellent",
+        "diseaseResistance": "Very High",
+        "feedEfficiency": "Excellent",
+        "climateAdaptability": "Hot and humid, coastal"
+      },
+      "economicValue": {
+        "purchaseCost": "₹30,000 - ₹1,00,000",
+        "maintenanceCost": "₹60-100/day",
+        "marketDemand": "High (medicinal value)"
+      },
+      "population": {
+        "status": "Critical",
+        "trend": "improving",
+        "conservationStatus": "Critically Endangered"
+      },
+      "bestFor": ["Small holdings", "Ayurvedic medicine", "Conservation"],
+      "governmentSchemes": ["Rashtriya Gokul Mission", "Kerala State Vechur Conservation"],
+      "funFact": "Vechur is the smallest cattle breed in the world! Its milk is considered to have medicinal properties in Ayurveda.",
+      "image": "/breeds/vechur.jpg"
+    }
+  },
+  "buffalo": {
+    "murrah": {
+      "name": "Murrah",
+      "nameHindi": "मुर्रा",
+      "type": "buffalo",
+      "nativeState": ["Haryana", "Punjab"],
+      "nativeRegion": "Rohtak, Hisar, Jind districts of Haryana",
+      "characteristics": {
+        "color": "Jet black",
+        "horns": "Tightly curled (coiled)",
+        "ears": "Small, thin",
+        "forehead": "Broad"
+      },
+      "productivity": {
+        "milkYieldPerDay": "15-20 liters",
+        "lactationYield": "3000-4500 liters",
+        "fatContent": "7.0-8.0%",
+        "lactationPeriod": "300-320 days"
+      },
+      "sustainability": {
+        "carbonFootprint": "Medium",
+        "carbonScore": 65,
+        "heatTolerance": "Good",
+        "diseaseResistance": "High",
+        "feedEfficiency": "Good",
+        "climateAdaptability": "Temperate to hot"
+      },
+      "economicValue": {
+        "purchaseCost": "₹80,000 - ₹3,00,000",
+        "maintenanceCost": "₹350-500/day",
+        "marketDemand": "Very High"
+      },
+      "population": {
+        "status": "Increasing",
+        "trend": "positive",
+        "conservationStatus": "Not Endangered"
+      },
+      "bestFor": ["Commercial dairy", "High milk production", "Fat-rich products"],
+      "governmentSchemes": ["Rashtriya Gokul Mission", "DIDF", "Haryana Buffalo Development"],
+      "funFact": "Murrah buffalo produces the highest milk yield among all buffalo breeds in the world and is exported to many countries.",
+      "image": "/breeds/murrah.jpg"
+    },
+    "mehsana": {
+      "name": "Mehsana",
+      "nameHindi": "मेहसाणा",
+      "type": "buffalo",
+      "nativeState": ["Gujarat"],
+      "nativeRegion": "Mehsana district of Gujarat",
+      "characteristics": {
+        "color": "Black to brownish black",
+        "horns": "Sickle-shaped, less curled than Murrah",
+        "ears": "Medium",
+        "forehead": "Broad, prominent"
+      },
+      "productivity": {
+        "milkYieldPerDay": "12-16 liters",
+        "lactationYield": "2500-3500 liters",
+        "fatContent": "7.0-7.5%",
+        "lactationPeriod": "300-320 days"
+      },
+      "sustainability": {
+        "carbonFootprint": "Medium",
+        "carbonScore": 68,
+        "heatTolerance": "Good",
+        "diseaseResistance": "High",
+        "feedEfficiency": "Good",
+        "climateAdaptability": "Semi-arid to hot"
+      },
+      "economicValue": {
+        "purchaseCost": "₹60,000 - ₹1,50,000",
+        "maintenanceCost": "₹300-400/day",
+        "marketDemand": "High"
+      },
+      "population": {
+        "status": "Stable",
+        "trend": "stable",
+        "conservationStatus": "Not Endangered"
+      },
+      "bestFor": ["Dairy farming", "Dual purpose", "Gujarat region"],
+      "governmentSchemes": ["Rashtriya Gokul Mission", "Gujarat State Dairy Development"],
+      "funFact": "Mehsana buffalo is a cross between Murrah and Surti, combining high milk yield with local adaptability.",
+      "image": "/breeds/mehsana.jpg"
+    },
+    "jaffarabadi": {
+      "name": "Jaffarabadi",
+      "nameHindi": "जाफराबादी",
+      "type": "buffalo",
+      "nativeState": ["Gujarat"],
+      "nativeRegion": "Gir forest region and Jamnagar district, Gujarat",
+      "characteristics": {
+        "color": "Black",
+        "horns": "Heavy, drooping, then curving upward",
+        "ears": "Long, drooping",
+        "forehead": "Very broad, bulging"
+      },
+      "productivity": {
+        "milkYieldPerDay": "10-16 liters",
+        "lactationYield": "2000-3000 liters",
+        "fatContent": "8.0-9.0%",
+        "lactationPeriod": "300-320 days"
+      },
+      "sustainability": {
+        "carbonFootprint": "Medium-High",
+        "carbonScore": 58,
+        "heatTolerance": "Good",
+        "diseaseResistance": "High",
+        "feedEfficiency": "Medium",
+        "climateAdaptability": "Coastal, humid"
+      },
+      "economicValue": {
+        "purchaseCost": "₹70,000 - ₹2,00,000",
+        "maintenanceCost": "₹350-450/day",
+        "marketDemand": "High"
+      },
+      "population": {
+        "status": "Declining",
+        "trend": "negative",
+        "conservationStatus": "Vulnerable"
+      },
+      "bestFor": ["High fat milk", "Ghee production", "Coastal regions"],
+      "governmentSchemes": ["Rashtriya Gokul Mission"],
+      "funFact": "Jaffarabadi is the heaviest buffalo breed in India, with bulls weighing up to 1000 kg. Known for exceptionally high fat content in milk.",
+      "image": "/breeds/jaffarabadi.jpg"
+    },
+    "surti": {
+      "name": "Surti",
+      "nameHindi": "सुरती",
+      "type": "buffalo",
+      "nativeState": ["Gujarat"],
+      "nativeRegion": "Kheda and Vadodara districts of Gujarat",
+      "characteristics": {
+        "color": "Brown to silver grey",
+        "horns": "Sickle-shaped, flat, down and backward",
+        "ears": "Medium, horizontal",
+        "forehead": "Broad, flat"
+      },
+      "productivity": {
+        "milkYieldPerDay": "8-12 liters",
+        "lactationYield": "1600-2400 liters",
+        "fatContent": "7.5-8.5%",
+        "lactationPeriod": "290-310 days"
+      },
+      "sustainability": {
+        "carbonFootprint": "Low-Medium",
+        "carbonScore": 72,
+        "heatTolerance": "Good",
+        "diseaseResistance": "High",
+        "feedEfficiency": "Good",
+        "climateAdaptability": "Hot and humid"
+      },
+      "economicValue": {
+        "purchaseCost": "₹40,000 - ₹90,000",
+        "maintenanceCost": "₹250-350/day",
+        "marketDemand": "Medium-High"
+      },
+      "population": {
+        "status": "Stable",
+        "trend": "stable",
+        "conservationStatus": "Not Endangered"
+      },
+      "bestFor": ["Small farms", "Good fat percentage", "Low input systems"],
+      "governmentSchemes": ["Rashtriya Gokul Mission"],
+      "funFact": "Surti buffalo is known for its docile temperament and efficiency in converting feed to milk, making it ideal for small farmers.",
+      "image": "/breeds/surti.jpg"
+    },
+    "bhadawari": {
+      "name": "Bhadawari",
+      "nameHindi": "भदावरी",
+      "type": "buffalo",
+      "nativeState": ["Uttar Pradesh", "Madhya Pradesh"],
+      "nativeRegion": "Bhadawar region of Agra and Etawah districts",
+      "characteristics": {
+        "color": "Copper colored to light brown",
+        "horns": "Curved, turning backward",
+        "ears": "Medium",
+        "forehead": "Broad"
+      },
+      "productivity": {
+        "milkYieldPerDay": "5-8 liters",
+        "lactationYield": "1000-1600 liters",
+        "fatContent": "8.0-12.0%",
+        "lactationPeriod": "270-300 days"
+      },
+      "sustainability": {
+        "carbonFootprint": "Low",
+        "carbonScore": 78,
+        "heatTolerance": "Excellent",
+        "diseaseResistance": "Very High",
+        "feedEfficiency": "Excellent",
+        "climateAdaptability": "Ravine, harsh terrain"
+      },
+      "economicValue": {
+        "purchaseCost": "₹30,000 - ₹70,000",
+        "maintenanceCost": "₹200-280/day",
+        "marketDemand": "Medium"
+      },
+      "population": {
+        "status": "Declining",
+        "trend": "negative",
+        "conservationStatus": "Endangered"
+      },
+      "bestFor": ["Ghee production", "Harsh conditions", "Low input systems"],
+      "governmentSchemes": ["Rashtriya Gokul Mission", "UP State Buffalo Development"],
+      "funFact": "Bhadawari buffalo has the highest fat percentage (up to 12%) among all buffalo breeds, making it prized for ghee production.",
+      "image": "/breeds/bhadawari.jpg"
+    },
+    "nili_ravi": {
+      "name": "Nili-Ravi",
+      "nameHindi": "नीली-रावी",
+      "type": "buffalo",
+      "nativeState": ["Punjab"],
+      "nativeRegion": "Sutlej valley, Ferozepur and Fazilka districts",
+      "characteristics": {
+        "color": "Black with white markings",
+        "horns": "Small, tightly curled",
+        "ears": "Small",
+        "forehead": "Bulging, wall-eyed"
+      },
+      "productivity": {
+        "milkYieldPerDay": "12-18 liters",
+        "lactationYield": "2500-4000 liters",
+        "fatContent": "6.5-7.5%",
+        "lactationPeriod": "300-320 days"
+      },
+      "sustainability": {
+        "carbonFootprint": "Medium",
+        "carbonScore": 66,
+        "heatTolerance": "Good",
+        "diseaseResistance": "High",
+        "feedEfficiency": "Good",
+        "climateAdaptability": "Irrigated plains"
+      },
+      "economicValue": {
+        "purchaseCost": "₹70,000 - ₹2,00,000",
+        "maintenanceCost": "₹320-420/day",
+        "marketDemand": "High"
+      },
+      "population": {
+        "status": "Stable",
+        "trend": "stable",
+        "conservationStatus": "Not Endangered"
+      },
+      "bestFor": ["Commercial dairy", "Punjab region", "High yield farming"],
+      "governmentSchemes": ["Rashtriya Gokul Mission", "Punjab State Dairy Mission"],
+      "funFact": "Nili-Ravi buffalo is characterized by distinctive wall-eyes (white iris) and white markings on face and legs.",
+      "image": "/breeds/nili_ravi.jpg"
+    },
+    "nagpuri": {
+      "name": "Nagpuri",
+      "nameHindi": "नागपुरी",
+      "type": "buffalo",
+      "nativeState": ["Maharashtra"],
+      "nativeRegion": "Nagpur, Akola, Amravati districts of Maharashtra",
+      "characteristics": {
+        "color": "Black",
+        "horns": "Long, flat, curved backward and upward",
+        "ears": "Medium, drooping",
+        "forehead": "Broad"
+      },
+      "productivity": {
+        "milkYieldPerDay": "5-8 liters",
+        "lactationYield": "1000-1800 liters",
+        "fatContent": "7.0-8.0%",
+        "lactationPeriod": "280-300 days"
+      },
+      "sustainability": {
+        "carbonFootprint": "Low-Medium",
+        "carbonScore": 74,
+        "heatTolerance": "Good",
+        "diseaseResistance": "High",
+        "feedEfficiency": "Good",
+        "climateAdaptability": "Semi-arid, Deccan"
+      },
+      "economicValue": {
+        "purchaseCost": "₹35,000 - ₹80,000",
+        "maintenanceCost": "₹220-300/day",
+        "marketDemand": "Medium"
+      },
+      "population": {
+        "status": "Declining",
+        "trend": "negative",
+        "conservationStatus": "Vulnerable"
+      },
+      "bestFor": ["Draught + dairy", "Vidarbha region", "Dual purpose"],
+      "governmentSchemes": ["Rashtriya Gokul Mission", "Maharashtra State Livestock Mission"],
+      "funFact": "Nagpuri buffalo is known for its uniquely long, sword-shaped horns that can span up to 1 meter from tip to tip.",
+      "image": "/breeds/nagpuri.jpg"
+    },
+    "pandharpuri": {
+      "name": "Pandharpuri",
+      "nameHindi": "पंढरपुरी",
+      "type": "buffalo",
+      "nativeState": ["Maharashtra"],
+      "nativeRegion": "Solapur, Sangli, Kolhapur districts of Maharashtra",
+      "characteristics": {
+        "color": "Light to grey-white",
+        "horns": "Medium, curved",
+        "ears": "Large, drooping",
+        "forehead": "Broad"
+      },
+      "productivity": {
+        "milkYieldPerDay": "6-10 liters",
+        "lactationYield": "1200-2000 liters",
+        "fatContent": "7.5-8.5%",
+        "lactationPeriod": "280-300 days"
+      },
+      "sustainability": {
+        "carbonFootprint": "Low-Medium",
+        "carbonScore": 72,
+        "heatTolerance": "Good",
+        "diseaseResistance": "High",
+        "feedEfficiency": "Good",
+        "climateAdaptability": "Semi-arid"
+      },
+      "economicValue": {
+        "purchaseCost": "₹40,000 - ₹90,000",
+        "maintenanceCost": "₹240-320/day",
+        "marketDemand": "Medium"
+      },
+      "population": {
+        "status": "Declining",
+        "trend": "negative",
+        "conservationStatus": "Vulnerable"
+      },
+      "bestFor": ["Temple regions", "Dual purpose", "Western Maharashtra"],
+      "governmentSchemes": ["Rashtriya Gokul Mission"],
+      "funFact": "Pandharpuri buffalo is named after the famous Pandharpur temple town and has religious significance in the region.",
+      "image": "/breeds/pandharpuri.jpg"
+    },
+    "toda": {
+      "name": "Toda",
+      "nameHindi": "टोडा",
+      "type": "buffalo",
+      "nativeState": ["Tamil Nadu"],
+      "nativeRegion": "Nilgiri hills of Tamil Nadu",
+      "characteristics": {
+        "color": "Grey to dark grey",
+        "horns": "Large, spreading outward and backward",
+        "ears": "Medium",
+        "forehead": "Broad"
+      },
+      "productivity": {
+        "milkYieldPerDay": "2-4 liters",
+        "lactationYield": "500-900 liters",
+        "fatContent": "8.0-9.0%",
+        "lactationPeriod": "200-250 days"
+      },
+      "sustainability": {
+        "carbonFootprint": "Very Low",
+        "carbonScore": 85,
+        "heatTolerance": "Low (adapted to cold)",
+        "diseaseResistance": "Very High",
+        "feedEfficiency": "Good",
+        "climateAdaptability": "Cold, hilly, high altitude"
+      },
+      "economicValue": {
+        "purchaseCost": "₹25,000 - ₹60,000",
+        "maintenanceCost": "₹150-220/day",
+        "marketDemand": "Low (rare breed)"
+      },
+      "population": {
+        "status": "Critical",
+        "trend": "negative",
+        "conservationStatus": "Critically Endangered"
+      },
+      "bestFor": ["Hill regions", "Conservation", "Toda tribal culture"],
+      "governmentSchemes": ["Rashtriya Gokul Mission", "TN State Conservation Programme"],
+      "funFact": "Toda buffalo is semi-wild and is integral to the culture of the Toda tribe. They are one of the few buffaloes adapted to high-altitude cold climates.",
+      "image": "/breeds/toda.jpg"
+    }
+  },
+  "governmentSchemes": {
+    "rashtriya_gokul_mission": {
+      "name": "Rashtriya Gokul Mission",
+      "nameHindi": "राष्ट्रीय गोकुल मिशन",
+      "description": "Central scheme for conservation and development of indigenous bovine breeds",
+      "benefits": ["Financial support for breeding", "Establishment of Gokul Grams", "Breed conservation"],
+      "eligibility": "Farmers, dairy cooperatives, NGOs",
+      "website": "https://dahd.nic.in/schemes/programmes/rashtriya-gokul-mission"
+    },
+    "pashu_kisan_credit_card": {
+      "name": "Pashu Kisan Credit Card",
+      "nameHindi": "पशु किसान क्रेडिट कार्ड",
+      "description": "Collateral-free credit for animal husbandry activities",
+      "benefits": ["Loan up to ₹3 lakh", "4% interest rate", "No collateral required"],
+      "eligibility": "Farmers owning livestock",
+      "website": "https://www.nabard.org"
+    },
+    "national_livestock_mission": {
+      "name": "National Livestock Mission",
+      "nameHindi": "राष्ट्रीय पशुधन मिशन",
+      "description": "Development of livestock sector including entrepreneurship",
+      "benefits": ["Skill development", "Breed improvement", "Risk management"],
+      "eligibility": "Farmers, entrepreneurs, SHGs",
+      "website": "https://nlm.udyamimitra.in"
+    },
+    "didf": {
+      "name": "Dairy Infrastructure Development Fund",
+      "nameHindi": "डेयरी अवसंरचना विकास कोष",
+      "description": "₹10,000 crore fund for dairy processing infrastructure",
+      "benefits": ["Loans at 6.5% interest", "Processing units", "Cold chain infrastructure"],
+      "eligibility": "Dairy cooperatives, producer companies",
+      "website": "https://dahd.nic.in/schemes/programmes/didf"
+    },
+    "egopala": {
+      "name": "e-Gopala App",
+      "nameHindi": "ई-गोपाला ऐप",
+      "description": "Digital platform for livestock management",
+      "benefits": ["Breed selection help", "Disease management", "Market information"],
+      "eligibility": "All farmers",
+      "website": "https://play.google.com/store/apps/details?id=com.icar.egopala"
+    }
+  },
+  "stateBreedMapping": {
+    "Andhra Pradesh": ["ongole", "punganur"],
+    "Gujarat": ["gir", "kankrej", "red_sindhi", "mehsana", "jaffarabadi", "surti"],
+    "Haryana": ["hariana", "murrah"],
+    "Karnataka": ["hallikar", "amritmahal", "deoni", "khillari"],
+    "Kerala": ["vechur"],
+    "Madhya Pradesh": ["bhadawari"],
+    "Maharashtra": ["deoni", "khillari", "nagpuri", "pandharpuri"],
+    "Punjab": ["sahiwal", "nili_ravi", "murrah"],
+    "Rajasthan": ["tharparkar", "rathi", "sahiwal", "kankrej"],
+    "Tamil Nadu": ["kangayam", "toda"],
+    "Uttar Pradesh": ["hariana", "bhadawari"]
+  }
+}

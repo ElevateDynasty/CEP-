@@ -18,7 +18,7 @@ try:
     GRADCAM_AVAILABLE = True
 except ImportError:
     GRADCAM_AVAILABLE = False
-    print("⚠️ pytorch-grad-cam not installed. Grad-CAM will be disabled.")
+    print("pytorch-grad-cam not installed. Grad-CAM will be disabled.")
 
 from app.services.model_service import ModelService
 from app.config import settings

@@ -23,7 +23,8 @@ class Settings(BaseSettings):
     # Model Settings
     MODEL_PATH: str = "ml_models"
     STAGE1_MODEL: str = "cattle_buffalo_classifier.pth"
-    STAGE2_MODEL: str = "breed_classifier.pth"
+    STAGE2_CATTLE_MODEL: str = "cattle_breed_classifier.pth"
+    STAGE2_BUFFALO_MODEL: str = "buffalo_breed_classifier.pth"
     
     # Image Settings
     MAX_IMAGE_SIZE: int = 10 * 1024 * 1024  # 10MB
@@ -35,17 +36,14 @@ class Settings(BaseSettings):
     SUPABASE_KEY: str = ""
     
     # Class mappings
-    ANIMAL_CLASSES: List[str] = ["cattle", "buffalo"]
+    ANIMAL_CLASSES: List[str] = ["cattle", "buffalo"]  # Aligned with training script (0=cattle, 1=buffalo)
     
     CATTLE_BREEDS: List[str] = [
-        "gir", "sahiwal", "red_sindhi", "tharparkar", "kankrej",
-        "ongole", "hariana", "rathi", "deoni", "khillari",
-        "kangayam", "hallikar", "amritmahal", "punganur", "vechur"
+        "Gir", "Ayrshire", "Hallikar", "Kenkatha"
     ]
     
     BUFFALO_BREEDS: List[str] = [
-        "murrah", "mehsana", "jaffarabadi", "surti", "bhadawari",
-        "nili_ravi", "nagpuri", "pandharpuri", "toda"
+        "Jaffarabadi", "murrah", "nili-ravi", "gojri"
     ]
     
     class Config:

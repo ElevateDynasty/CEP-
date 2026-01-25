@@ -47,31 +47,63 @@ class ModelService:
         model_path = Path(__file__).parent.parent.parent / "ml_models"
         
         try:
+            # Load Class Mappings first
+            classes_path = model_path / "classes.json"
+            if classes_path.exists():
+                with open(classes_path, 'r') as f:
+                    import json
+                    self.animal_classes = json.load(f)
+                print(f"Loaded class mappings: {self.animal_classes}")
+            
             # Check if model files exist
             stage1_path = model_path / settings.STAGE1_MODEL
             
             if stage1_path.exists():
                 # Load Stage 1 model (Cattle vs Buffalo)
-                self.stage1_model = self._create_model(num_classes=2)
+                # ResNet18 is used in training, so we must use it here
+                self.stage1_model = models.resnet18(pretrained=False)
+                num_ftrs = self.stage1_model.fc.in_features
+                self.stage1_model.fc = nn.Linear(num_ftrs, len(self.animal_classes))
+                
                 self.stage1_model.load_state_dict(torch.load(stage1_path, map_location=self.device))
                 self.stage1_model.to(self.device)
                 self.stage1_model.eval()
-                print("✅ Stage 1 model loaded")
-            else:
-                print("⚠️ Stage 1 model not found, using demo mode")
+                print("Stage 1 model loaded (ResNet18 Fine-Tuned)")
+            
+            # Check and load Stage 2 models
+            stage2_cattle_path = model_path / settings.STAGE2_CATTLE_MODEL
+            if stage2_cattle_path.exists():
+                self.stage2_cattle_model = self._create_model(num_classes=len(self.cattle_breeds))
+                self.stage2_cattle_model.load_state_dict(torch.load(stage2_cattle_path, map_location=self.device))
+                self.stage2_cattle_model.to(self.device)
+                self.stage2_cattle_model.eval()
+                print("Stage 2 Cattle model loaded")
+                
+            stage2_buffalo_path = model_path / settings.STAGE2_BUFFALO_MODEL
+            if stage2_buffalo_path.exists():
+                self.stage2_buffalo_model = self._create_model(num_classes=len(self.buffalo_breeds))
+                self.stage2_buffalo_model.load_state_dict(torch.load(stage2_buffalo_path, map_location=self.device))
+                self.stage2_buffalo_model.to(self.device)
+                self.stage2_buffalo_model.eval()
+                print("Stage 2 Buffalo model loaded")
+            
+            if not stage1_path.exists() and not (stage2_cattle_path.exists() or stage2_buffalo_path.exists()):
+                print("Models not found, using demo mode")
                 self._create_demo_models()
             
             self.is_loaded = True
             
         except Exception as e:
-            print(f"⚠️ Error loading models: {e}")
+            print(f"Error loading models: {e}")
             print("Using demo mode with random predictions")
             self._create_demo_models()
     
     def _create_demo_models(self):
         """Create demo models for testing without trained weights"""
         # Stage 1: Cattle vs Buffalo (2 classes)
-        self.stage1_model = self._create_model(num_classes=2)
+        self.stage1_model = models.resnet18(pretrained=True)
+        num_ftrs = self.stage1_model.fc.in_features
+        self.stage1_model.fc = nn.Linear(num_ftrs, 2)
         self.stage1_model.to(self.device)
         self.stage1_model.eval()
         
@@ -85,7 +117,7 @@ class ModelService:
         self.stage2_buffalo_model.eval()
         
         self.is_loaded = True
-        print("✅ Demo models created")
+        print("Demo models created")
     
     def _create_model(self, num_classes: int) -> nn.Module:
         """Create EfficientNet-B0 model with custom classifier"""
@@ -102,6 +134,11 @@ class ModelService:
     
     def preprocess(self, image: Image.Image) -> torch.Tensor:
         """Preprocess image for model input"""
+        # Ensure transform matches training
+        # If the image is grayscale, convert to RGB
+        if image.mode != 'RGB':
+            image = image.convert('RGB')
+            
         tensor = self.transform(image)
         return tensor.unsqueeze(0).to(self.device)
     
@@ -120,6 +157,8 @@ class ModelService:
             stage1_output = self.stage1_model(input_tensor)
             stage1_probs = torch.softmax(stage1_output, dim=1)
             animal_type_idx = torch.argmax(stage1_probs, dim=1).item()
+            
+            # Use loaded classes
             animal_type = self.animal_classes[animal_type_idx]
             animal_type_confidence = stage1_probs[0][animal_type_idx].item()
             

@@ -33,14 +33,19 @@ CONFIG = {
 
 # Breed definitions
 CATTLE_BREEDS = [
-    "gir", "sahiwal", "red_sindhi", "tharparkar", "kankrej",
-    "ongole", "hariana", "rathi", "deoni", "khillari",
-    "kangayam", "hallikar", "amritmahal", "punganur", "vechur"
+    "Amritmahal", "Ayrshire", "bachaur", "badri", "Bargur", "bhelai", "dagri", "Dangi", "Deoni", 
+    "gangatari", "gaolao", "ghumsari", "Gir", "Hallikar", "Hariana", "Himachali Pahari", 
+    "Kangayam", "Kankrej", "Kenkatha", "Khariar", "kherigarh", "Khillari", "Konkan Kapila", 
+    "Kosali", "Krishna_Valley", "Ladakhi", "Lakhimi", "Malnad_gidda", "malvi", "Mewati", 
+    "motu", "nagori", "Nari", "Nimari", "Ongole", "Poda Thirupu", "ponwar", "Pulikulam", 
+    "Punganur", "Purnea", "Rathi", "Red kandhari", "Red_Sindhi", "Sahiwal", "Shweta Kapila", 
+    "siri", "Tharparkar", "thutho", "Umblachery", "Vechur"
 ]
 
 BUFFALO_BREEDS = [
-    "murrah", "mehsana", "jaffarabadi", "surti", "bhadawari",
-    "nili_ravi", "nagpuri", "pandharpuri", "toda"
+    "banni", "bargur", "bhadwari", "Chhattisgarhi", "chilika", "gojri", "Jaffarabadi", 
+    "kalahandi", "luit", "marathwada", "mehsana", "murrah", "nagpuri", "nili-ravi", 
+    "pandharpuri", "surti", "toda"
 ]
 
 # Data transforms with augmentation
@@ -73,7 +78,7 @@ val_transform = transforms.Compose([
 class BreedDataset(Dataset):
     """Dataset for breed classification"""
     
-    def __init__(self, data_dir: str, breeds: list, transform=None):
+    def __init__(self, data_dir: str, breeds: list, animal_type: str, transform=None):
         self.data_dir = Path(data_dir)
         self.transform = transform
         self.breeds = breeds
@@ -83,7 +88,7 @@ class BreedDataset(Dataset):
         
         # Load image paths
         for breed in breeds:
-            breed_dir = self.data_dir / breed
+            breed_dir = self.data_dir / animal_type / breed
             if breed_dir.exists():
                 for img_path in breed_dir.glob("*.*"):
                     if img_path.suffix.lower() in [".jpg", ".jpeg", ".png", ".webp"]:
@@ -234,10 +239,10 @@ def train_breed_classifier(animal_type: str, breeds: list, model_name: str):
     
     # Load dataset
     print("\nLoading dataset...")
-    full_dataset = BreedDataset(CONFIG["data_dir"], breeds, transform=None)
+    full_dataset = BreedDataset(CONFIG["data_dir"], breeds, animal_type, transform=None)
     
     if len(full_dataset) == 0:
-        print(f"❌ No images found for {animal_type}!")
+        print(f"No images found for {animal_type}!")
         return None
     
     # Split dataset
@@ -356,7 +361,7 @@ def train_breed_classifier(animal_type: str, breeds: list, model_name: str):
             best_val_acc = val_acc
             model_path = output_dir / model_name
             torch.save(model.state_dict(), model_path)
-            print(f"✅ Saved best model with {val_acc:.2f}% accuracy")
+            print(f"Saved best model with {val_acc:.2f}% accuracy")
             patience_counter = 0
         else:
             patience_counter += 1
@@ -400,7 +405,7 @@ def train_breed_classifier(animal_type: str, breeds: list, model_name: str):
     plt.savefig(output_dir / f"{animal_type}_breed_training_curves.png")
     plt.close()
     
-    print(f"\n✅ {animal_type.capitalize()} breed classifier trained!")
+    print(f"\n{animal_type.capitalize()} breed classifier trained!")
     print(f"   Best accuracy: {best_val_acc:.2f}%")
     
     return best_val_acc

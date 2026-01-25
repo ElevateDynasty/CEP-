@@ -1,3 +1,6 @@
+import os
+os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
+
 """
 Indian Cattle & Buffalo Breed Recognition API
 FastAPI backend with ML inference, Grad-CAM, and breed metadata
@@ -55,25 +58,25 @@ DATA_PATH = Path(__file__).parent.parent.parent / "data" / "breed_info.json"
 @app.on_event("startup")
 async def startup_event():
     """Initialize services on startup"""
-    print("🚀 Starting Indian Breed Recognition API...")
+    print("Starting Indian Breed Recognition API...")
     
     # Load breed metadata
     if DATA_PATH.exists():
         with open(DATA_PATH, "r", encoding="utf-8") as f:
             app.state.breed_data = json.load(f)
-        print("✅ Breed metadata loaded")
+        print("Breed metadata loaded")
     else:
-        print("⚠️ Breed metadata file not found")
+        print("Breed metadata file not found")
         app.state.breed_data = {}
     
     # Initialize ML model service (lazy loading)
     app.state.model_service = ModelService()
-    print("✅ Model service initialized")
+    print("Model service initialized")
 
 @app.on_event("shutdown")
 async def shutdown_event():
     """Cleanup on shutdown"""
-    print("👋 Shutting down API...")
+    print("Shutting down API...")
 
 @app.get("/", tags=["Health"])
 async def root():

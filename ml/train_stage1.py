@@ -63,29 +63,38 @@ class CattleBuffaloDataset(Dataset):
         self.samples = []
         self.class_to_idx = {"cattle": 0, "buffalo": 1}
         
-        # Cattle breeds (from your dataset structure)
+        # Cattle breeds (updated from dataset)
         cattle_breeds = [
-            "gir", "sahiwal", "red_sindhi", "tharparkar", "kankrej",
-            "ongole", "hariana", "rathi", "deoni", "khillari",
-            "kangayam", "hallikar", "amritmahal", "punganur", "vechur"
+            "Amritmahal", "Ayrshire", "bachaur", "badri", "Bargur", "bhelai", "dagri", "Dangi", "Deoni", 
+            "gangatari", "gaolao", "ghumsari", "Gir", "Hallikar", "Hariana", "Himachali Pahari", 
+            "Kangayam", "Kankrej", "Kenkatha", "Khariar", "kherigarh", "Khillari", "Konkan Kapila", 
+            "Kosali", "Krishna_Valley", "Ladakhi", "Lakhimi", "Malnad_gidda", "malvi", "Mewati", 
+            "motu", "nagori", "Nari", "Nimari", "Ongole", "Poda Thirupu", "ponwar", "Pulikulam", 
+            "Punganur", "Purnea", "Rathi", "Red kandhari", "Red_Sindhi", "Sahiwal", "Shweta Kapila", 
+            "siri", "Tharparkar", "thutho", "Umblachery", "Vechur"
         ]
         
-        # Buffalo breeds
+        # Buffalo breeds (updated from dataset)
         buffalo_breeds = [
-            "murrah", "mehsana", "jaffarabadi", "surti", "bhadawari",
-            "nili_ravi", "nagpuri", "pandharpuri", "toda"
+            "banni", "bargur", "bhadwari", "Chhattisgarhi", "chilika", "gojri", "Jaffarabadi", 
+            "kalahandi", "luit", "marathwada", "mehsana", "murrah", "nagpuri", "nili-ravi", 
+            "pandharpuri", "surti", "toda"
         ]
         
         # Load image paths
+        # Look in dataset/cattle/{breed}
+        cattle_root = self.data_dir / "cattle"
         for breed in cattle_breeds:
-            breed_dir = self.data_dir / breed
+            breed_dir = cattle_root / breed
             if breed_dir.exists():
                 for img_path in breed_dir.glob("*.*"):
                     if img_path.suffix.lower() in [".jpg", ".jpeg", ".png", ".webp"]:
                         self.samples.append((str(img_path), 0))  # 0 = cattle
         
+        # Look in dataset/buffalo/{breed}
+        buffalo_root = self.data_dir / "buffalo"
         for breed in buffalo_breeds:
-            breed_dir = self.data_dir / breed
+            breed_dir = buffalo_root / breed
             if breed_dir.exists():
                 for img_path in breed_dir.glob("*.*"):
                     if img_path.suffix.lower() in [".jpg", ".jpeg", ".png", ".webp"]:
@@ -200,7 +209,7 @@ def main():
     full_dataset = CattleBuffaloDataset(CONFIG["data_dir"], transform=None)
     
     if len(full_dataset) == 0:
-        print("❌ No images found! Please check the dataset directory.")
+        print("No images found! Please check the dataset directory.")
         print(f"   Expected path: {CONFIG['data_dir']}")
         print("\nDataset structure should be:")
         print("   dataset/")
@@ -292,7 +301,7 @@ def main():
             best_val_acc = val_acc
             model_path = output_dir / CONFIG["model_name"]
             torch.save(model.state_dict(), model_path)
-            print(f"✅ Saved best model with {val_acc:.2f}% accuracy")
+            print(f"Saved best model with {val_acc:.2f}% accuracy")
     
     # Save training history
     history_path = output_dir / "stage1_history.json"

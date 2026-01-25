@@ -49,11 +49,13 @@ models/*.pt
 *.onnx
 *.h5
 
+
 # Dataset (large files)
 data/raw/
 data/processed/
 *.zip
 *.tar.gz
+dataset/
 
 # Jupyter
 .ipynb_checkpoints/

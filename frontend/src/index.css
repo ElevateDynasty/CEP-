@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Leaflet custom marker styles */
+.custom-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.leaflet-popup-content {
+  margin: 0;
+}
+
 @layer base {
   html {
     font-family: 'Inter', system-ui, sans-serif;

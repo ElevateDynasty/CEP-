@@ -1,68 +1,186 @@
-# Dependencies
-node_modules/
+# ====================
+# Python
+# ====================
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
 .Python
-env/
-venv/
-.venv/
-ENV/
-
-# Build outputs
-dist/
 build/
-*.egg-info/
+develop-eggs/
+dist/
+downloads/
+eggs/
 .eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
 
-# IDE
+# PyInstaller
+*.manifest
+*.spec
+
+# Virtual Environments
+venv/
+ENV/
+env/
+.venv/
+.env/
+
+# ====================
+# Node.js
+# ====================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ====================
+# IDE & Editors
+# ====================
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 .idea/
-.vscode/
 *.swp
 *.swo
 *~
+.project
+.classpath
+.settings/
+*.sublime-workspace
+*.sublime-project
 
-# OS
-.DS_Store
-Thumbs.db
+# ====================
+# Build Outputs
+# ====================
+dist/
+build/
+*.egg-info/
+.next/
+out/
 
-# Environment files
+# ====================
+# Environment Variables
+# ====================
 .env
 .env.local
+.env.development
+.env.test
+.env.production
 .env.*.local
 
+# ====================
+# Machine Learning
+# ====================
+*.pth
+*.pt
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.onnx
+*.pb
+*.tflite
+ml/dataset/
+backend/ml_models/*.pth
+!backend/ml_models/.gitkeep
+
+# ====================
 # Logs
+# ====================
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# ====================
+# OS Generated
+# ====================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ====================
 # Testing
+# ====================
 .coverage
 htmlcov/
-.pytest_cache/
 .tox/
+.nox/
+.pytest_cache/
+.hypothesis/
+coverage.xml
+*.cover
+*.py,cover
 
-# ML Models (large files)
-models/*.pth
-models/*.pt
-*.onnx
-*.h5
-
-
-# Dataset (large files)
-data/raw/
-data/processed/
-*.zip
-*.tar.gz
-dataset/
-
-# Jupyter
+# ====================
+# Jupyter Notebooks
+# ====================
 .ipynb_checkpoints/
+*.ipynb
 
+# ====================
 # Cache
+# ====================
 .cache/
+*.cache
 .parcel-cache/
+.eslintcache
+.stylelintcache
 
-# Hugging Face
-.huggingface/
+# ====================
+# Temporary Files
+# ====================
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# ====================
+# Uploads & Media
+# ====================
+uploads/
+media/
+static/uploads/
+
+# ====================
+# Documentation
+# ====================
+docs/_build/
+site/
+
+# ====================
+# Docker
+# ====================
+.docker/
+docker-compose.override.yml
+
+# ====================
+# Misc
+# ====================
+*.local
+.vercel
+.turbo

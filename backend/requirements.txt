@@ -1,18 +1,39 @@
-# Backend Dependencies
-fastapi
-uvicorn[standard]
-python-multipart==0.0.6
-pillow
-torch
-torchvision
-numpy
-opencv-python>=4.10.0
-grad-cam==1.5.0
-pydantic
-pydantic-settings
-python-jose[cryptography]==3.3.0
-passlib[bcrypt]==1.7.4
-supabase
-httpx
-aiofiles==23.2.1
-python-dotenv==1.0.0
+# =====================================================
+# Indian Cattle & Buffalo Breed Recognition - Backend
+# =====================================================
+
+# Web Framework
+fastapi>=0.100.0
+uvicorn[standard]>=0.22.0
+python-multipart>=0.0.6
+
+# Machine Learning
+torch>=2.0.0
+torchvision>=0.15.0
+timm>=0.9.0
+
+# Image Processing
+opencv-python-headless>=4.8.0
+Pillow>=9.5.0
+numpy>=1.24.0
+
+# Model Interpretability
+grad-cam>=1.4.8
+pytorch-grad-cam>=1.4.8
+
+# CORS & HTTP
+starlette>=0.27.0
+httpx>=0.24.0
+
+# Utilities
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+
+# Logging
+loguru>=0.7.0
+
+# Optional: Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+httpx>=0.24.0

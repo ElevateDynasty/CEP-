@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Menu, X, Languages, Home, Camera, BookOpen, GitCompare, Map, Building2 } from 'lucide-react';
+import { Menu, X, Languages, Home, Camera, BookOpen, GitCompare, Map, Building2, User, LogIn } from 'lucide-react';
+import { useAuth } from '../context/AuthContext';
 
 const navItems = [
   { path: '/', labelKey: 'nav.home', icon: Home },
@@ -16,6 +17,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { t, i18n } = useTranslation();
   const location = useLocation();
+  const { user, isAuthenticated } = useAuth();
 
   const toggleLanguage = () => {
     const newLang = i18n.language === 'en' ? 'hi' : 'en';
@@ -58,7 +60,7 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* Language Toggle & Mobile Menu Button */}
+          {/* Language Toggle, Auth & Mobile Menu Button */}
           <div className="flex items-center space-x-2">
             <button
               onClick={toggleLanguage}
@@ -67,6 +69,25 @@ export default function Navbar() {
               <Languages size={18} />
               <span>{i18n.language === 'en' ? 'हिं' : 'EN'}</span>
             </button>
+
+            {/* Auth buttons */}
+            {isAuthenticated ? (
+              <Link
+                to="/profile"
+                className="flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100 transition-colors"
+              >
+                <User size={18} />
+                <span className="hidden sm:inline">{user?.full_name?.split(' ')[0] || 'Profile'}</span>
+              </Link>
+            ) : (
+              <Link
+                to="/login"
+                className="flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium bg-green-600 text-white hover:bg-green-700 transition-colors"
+              >
+                <LogIn size={18} />
+                <span className="hidden sm:inline">{t('nav.login', 'Login')}</span>
+              </Link>
+            )}
 
             {/* Mobile menu button */}
             <button
@@ -101,6 +122,39 @@ export default function Navbar() {
                   </Link>
                 );
               })}
+              
+              {/* Mobile auth links */}
+              <div className="border-t mt-2 pt-2">
+                {isAuthenticated ? (
+                  <Link
+                    to="/profile"
+                    onClick={() => setIsOpen(false)}
+                    className="flex items-center space-x-3 px-4 py-3 rounded-lg text-base font-medium text-gray-600 hover:bg-gray-100"
+                  >
+                    <User size={20} />
+                    <span>{t('nav.profile', 'Profile')}</span>
+                  </Link>
+                ) : (
+                  <>
+                    <Link
+                      to="/login"
+                      onClick={() => setIsOpen(false)}
+                      className="flex items-center space-x-3 px-4 py-3 rounded-lg text-base font-medium text-gray-600 hover:bg-gray-100"
+                    >
+                      <LogIn size={20} />
+                      <span>{t('nav.login', 'Login')}</span>
+                    </Link>
+                    <Link
+                      to="/register"
+                      onClick={() => setIsOpen(false)}
+                      className="flex items-center space-x-3 px-4 py-3 rounded-lg text-base font-medium text-green-600 hover:bg-green-50"
+                    >
+                      <User size={20} />
+                      <span>{t('nav.register', 'Register')}</span>
+                    </Link>
+                  </>
+                )}
+              </div>
             </div>
           </div>
         )}

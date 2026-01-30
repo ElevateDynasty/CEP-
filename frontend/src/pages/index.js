@@ -5,3 +5,6 @@ export { default as BreedDetailPage } from './BreedDetailPage';
 export { default as ComparePage } from './ComparePage';
 export { default as MapPage } from './MapPage';
 export { default as SchemesPage } from './SchemesPage';
+export { default as LoginPage } from './LoginPage';
+export { default as RegisterPage } from './RegisterPage';
+export { default as ProfilePage } from './ProfilePage';

@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
   Search, Filter, ChevronRight, Leaf, ChevronDown, ChevronUp,
   Grid3X3, List, SortAsc, MapPin, Scale, Check,
   X, AlertTriangle, Droplets, IndianRupee
@@ -11,40 +11,13 @@ import { useCompare } from '../context/CompareContext';
 import breedData from '../data/breedData';
 
 // Real Indian cattle and buffalo breed images from Wikimedia Commons (verified working URLs)
-const BREED_IMAGES = {
-  cattle: {
-    gir: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Gir_01.JPG/320px-Gir_01.JPG',
-    sahiwal: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Sahiwal_cattle_in_Pakistan.jpg/320px-Sahiwal_cattle_in_Pakistan.jpg',
-    redSindhi: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Sindhi_cow.JPG/320px-Sindhi_cow.JPG',
-    tharparkar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Tharparkar_Cattle_%28JLPS%29.jpg/320px-Tharparkar_Cattle_%28JLPS%29.jpg',
-    kankrej: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Kankrej_Cow_Gujarat.jpg/320px-Kankrej_Cow_Gujarat.jpg',
-    ongole: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Ongole_bull.JPG/320px-Ongole_bull.JPG',
-    hariana: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Hariana_bull.jpg/320px-Hariana_bull.jpg',
-    rathi: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Rathi_cow_of_Bikaner_side_view.jpg/320px-Rathi_cow_of_Bikaner_side_view.jpg',
-    deoni: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Deoni_Cattle_breed.jpg/320px-Deoni_Cattle_breed.jpg',
-    khillari: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Killari_bull.jpg/320px-Killari_bull.jpg',
-    kangayam: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Kangayam_bull_head.jpg/320px-Kangayam_bull_head.jpg',
-    hallikar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Hallikar_cattle.jpg/320px-Hallikar_cattle.jpg',
-    amritmahal: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Amrit_mahal_cattle_breed.jpg/320px-Amrit_mahal_cattle_breed.jpg',
-    punganur: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Punganur_cattle.jpg/320px-Punganur_cattle.jpg',
-    vechur: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Vechur_Cow.jpg/320px-Vechur_Cow.jpg',
-  },
-  buffalo: {
-    murrah: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Murrah_buffalo_in_PCC.jpg/320px-Murrah_buffalo_in_PCC.jpg',
-    mehsana: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Mehsana_buffalo.jpg/320px-Mehsana_buffalo.jpg',
-    jaffarabadi: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Jafarabadi_buffalo.jpg/320px-Jafarabadi_buffalo.jpg',
-    surti: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Surti_buffalo.jpg/320px-Surti_buffalo.jpg',
-    bhadawari: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Bhadawari_buffalo.jpg/320px-Bhadawari_buffalo.jpg',
-    niliRavi: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Nili-Ravi_Buffalo.jpg/320px-Nili-Ravi_Buffalo.jpg',
-    nagpuri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Nagpuri_buffalo.jpg/320px-Nagpuri_buffalo.jpg',
-    pandharpuri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Pandharpuri_Buffalo.jpg/320px-Pandharpuri_Buffalo.jpg',
-    toda: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Toda_buffalo.jpg/320px-Toda_buffalo.jpg',
-  }
-};
+// Load all breed images from local assets
+const breedImages = import.meta.glob('../assets/breeds/*.jpg', { eager: true });
 
-// Get breed image - returns URL or null for fallback
+// Get breed image - returns local asset or null
 const getBreedImage = (breed) => {
-  return BREED_IMAGES[breed.type]?.[breed.id] || null;
+  const path = `../assets/breeds/${breed.id}.jpg`;
+  return breedImages[path]?.default || null;
 };
 
 // Generate a unique gradient based on breed for visual distinction
@@ -60,7 +33,7 @@ const getBreedGradient = (breed) => {
     'from-rose-500 to-red-600',
     'from-yellow-600 to-orange-500',
   ];
-  
+
   const buffaloGradients = [
     'from-slate-700 to-gray-900',
     'from-gray-700 to-slate-900',
@@ -69,7 +42,7 @@ const getBreedGradient = (breed) => {
     'from-stone-700 to-zinc-900',
     'from-slate-800 to-gray-950',
   ];
-  
+
   const gradients = breed.type === 'cattle' ? cattleGradients : buffaloGradients;
   const hash = breed.name.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
   return `bg-gradient-to-br ${gradients[hash % gradients.length]}`;
@@ -116,7 +89,7 @@ const getAllStates = () => {
 export default function ExplorePage() {
   const { t } = useTranslation();
   const { selectedBreeds, toggleBreed, isSelected, canAddMore } = useCompare();
-  
+
   // State
   const [searchQuery, setSearchQuery] = useState('');
   const [filterType, setFilterType] = useState('all');
@@ -174,19 +147,19 @@ export default function ExplorePage() {
   const filteredBreeds = useMemo(() => {
     let result = breeds.filter(breed => {
       // Search filter
-      const matchesSearch = 
+      const matchesSearch =
         !searchQuery ||
         breed.name?.toLowerCase().includes(searchQuery.toLowerCase()) ||
         breed.nameHindi?.includes(searchQuery) ||
         breed.nativeState?.some(state => state.toLowerCase().includes(searchQuery.toLowerCase())) ||
         breed.bestFor?.some(use => use.toLowerCase().includes(searchQuery.toLowerCase()));
-      
+
       // Type filter
       const matchesType = filterType === 'all' || breed.type === filterType;
-      
+
       // State filter
       const matchesState = filterState === 'all' || breed.nativeState?.includes(filterState);
-      
+
       // Conservation filter
       const status = breed.population?.conservationStatus?.toLowerCase() || '';
       let matchesConservation = true;
@@ -201,7 +174,7 @@ export default function ExplorePage() {
           matchesConservation = status.includes('not at risk') || status.includes('stable');
         }
       }
-      
+
       return matchesSearch && matchesType && matchesState && matchesConservation;
     });
 
@@ -210,7 +183,7 @@ export default function ExplorePage() {
     if (sortOption) {
       result.sort((a, b) => {
         let valueA, valueB;
-        
+
         switch (sortOption.field) {
           case 'name':
             valueA = a.name || '';
@@ -233,7 +206,7 @@ export default function ExplorePage() {
         }
 
         if (typeof valueA === 'string') {
-          return sortOption.direction === 'asc' 
+          return sortOption.direction === 'asc'
             ? valueA.localeCompare(valueB)
             : valueB.localeCompare(valueA);
         }
@@ -325,11 +298,10 @@ export default function ExplorePage() {
                 <button
                   key={type}
                   onClick={() => setFilterType(type)}
-                  className={`px-4 py-2.5 rounded-xl text-sm font-medium transition-all ${
-                    filterType === type
+                  className={`px-4 py-2.5 rounded-xl text-sm font-medium transition-all ${filterType === type
                       ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-md'
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                  }`}
+                    }`}
                 >
                   {type === 'all' ? 'All' : type === 'cattle' ? '🐄 Cattle' : '🐃 Buffalo'}
                 </button>
@@ -357,11 +329,10 @@ export default function ExplorePage() {
             {/* Advanced Filters Toggle */}
             <button
               onClick={() => setShowFilters(!showFilters)}
-              className={`flex items-center gap-2 px-4 py-2.5 rounded-xl border transition-all ${
-                showFilters || activeFilterCount > 0
-                  ? 'bg-green-50 border-green-200 text-green-700' 
+              className={`flex items-center gap-2 px-4 py-2.5 rounded-xl border transition-all ${showFilters || activeFilterCount > 0
+                  ? 'bg-green-50 border-green-200 text-green-700'
                   : 'border-gray-200 text-gray-600 hover:bg-gray-50'
-              }`}
+                }`}
             >
               <Filter size={18} />
               <span>Filters</span>
@@ -480,7 +451,7 @@ export default function ExplorePage() {
               const selected = isSelected(breed.id);
               const imageUrl = getBreedImage(breed);
               const gradientClass = getBreedGradient(breed);
-              
+
               return (
                 <motion.div
                   key={breed.id}
@@ -489,11 +460,10 @@ export default function ExplorePage() {
                   transition={{ delay: idx * 0.03 }}
                   className="group"
                 >
-                  <Link 
-                    to={`/breed/${breed.id}`} 
-                    className={`block bg-white rounded-2xl shadow-md hover:shadow-xl transition-all overflow-hidden border-2 ${
-                      selected ? 'border-green-500 ring-2 ring-green-200' : 'border-transparent'
-                    }`}
+                  <Link
+                    to={`/breed/${breed.id}`}
+                    className={`block bg-white rounded-2xl shadow-md hover:shadow-xl transition-all overflow-hidden border-2 ${selected ? 'border-green-500 ring-2 ring-green-200' : 'border-transparent'
+                      }`}
                   >
                     {/* Image with gradient fallback */}
                     <div className={`relative h-40 overflow-hidden ${gradientClass}`}>
@@ -517,7 +487,7 @@ export default function ExplorePage() {
                         </div>
                       )}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                      
+
                       {/* Breed type label */}
                       <span className="absolute top-3 left-3 bg-white/20 backdrop-blur-sm text-white text-xs px-2 py-1 rounded-full font-medium">
                         {breed.type === 'cattle' ? 'Cattle' : 'Buffalo'}
@@ -527,13 +497,12 @@ export default function ExplorePage() {
                       <button
                         onClick={(e) => handleCompareToggle(e, breed.id)}
                         disabled={!selected && !canAddMore}
-                        className={`absolute top-3 right-3 p-2 rounded-full transition-all ${
-                          selected
+                        className={`absolute top-3 right-3 p-2 rounded-full transition-all ${selected
                             ? 'bg-green-500 text-white'
                             : canAddMore
                               ? 'bg-white/90 text-gray-600 hover:bg-green-500 hover:text-white'
                               : 'bg-white/50 text-gray-400 cursor-not-allowed'
-                        }`}
+                          }`}
                         title={selected ? 'Remove from compare' : canAddMore ? 'Add to compare' : 'Max 4 breeds'}
                       >
                         {selected ? <Check size={16} /> : <Scale size={16} />}
@@ -553,7 +522,7 @@ export default function ExplorePage() {
                       {/* States */}
                       <div className="flex flex-wrap gap-1 mb-3">
                         {breed.nativeState?.map((state, i) => (
-                          <span 
+                          <span
                             key={i}
                             className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full"
                           >
@@ -578,7 +547,7 @@ export default function ExplorePage() {
                       {breed.bestFor && breed.bestFor.length > 0 && (
                         <div className="flex flex-wrap gap-1 mb-3">
                           {breed.bestFor.slice(0, 2).map((use, i) => (
-                            <span 
+                            <span
                               key={i}
                               className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full"
                             >
@@ -616,7 +585,7 @@ export default function ExplorePage() {
               const selected = isSelected(breed.id);
               const imageUrl = getBreedImage(breed);
               const gradientClass = getBreedGradient(breed);
-              
+
               return (
                 <motion.div
                   key={breed.id}
@@ -624,11 +593,10 @@ export default function ExplorePage() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: idx * 0.02 }}
                 >
-                  <Link 
+                  <Link
                     to={`/breed/${breed.id}`}
-                    className={`flex items-center gap-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-all p-4 border-2 ${
-                      selected ? 'border-green-500 ring-2 ring-green-200' : 'border-transparent'
-                    }`}
+                    className={`flex items-center gap-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-all p-4 border-2 ${selected ? 'border-green-500 ring-2 ring-green-200' : 'border-transparent'
+                      }`}
                   >
                     {/* Image with gradient fallback */}
                     <div className={`relative w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 ${gradientClass}`}>
@@ -689,13 +657,12 @@ export default function ExplorePage() {
                       <button
                         onClick={(e) => handleCompareToggle(e, breed.id)}
                         disabled={!selected && !canAddMore}
-                        className={`p-2 rounded-lg transition-all ${
-                          selected
+                        className={`p-2 rounded-lg transition-all ${selected
                             ? 'bg-green-500 text-white'
                             : canAddMore
                               ? 'bg-gray-100 text-gray-600 hover:bg-green-500 hover:text-white'
                               : 'bg-gray-50 text-gray-300 cursor-not-allowed'
-                        }`}
+                          }`}
                         title={selected ? 'Remove from compare' : canAddMore ? 'Add to compare' : 'Max 4 breeds'}
                       >
                         {selected ? <Check size={18} /> : <Scale size={18} />}

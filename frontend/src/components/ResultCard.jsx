@@ -39,14 +39,14 @@ export default function ResultCard({ result, imagePreview }) {
     if (lang === 'hi') {
       text = `यह ${animal_type === 'cattle' ? 'गाय' : 'भैंस'} है। 
               नस्ल ${breed_hindi || breed} है। 
-              विश्वास स्तर ${Math.round(breed_confidence)} प्रतिशत है।`;
+              विश्वास स्तर ${Math.round(breed_confidence * 100)} प्रतिशत है।`;
       if (breed_info?.funFact) {
         text += ` रोचक तथ्य: ${breed_info.funFact}`;
       }
     } else {
       text = `This is a ${animal_type}. 
               The breed is ${breed}. 
-              Confidence level is ${Math.round(breed_confidence)} percent.`;
+              Confidence level is ${Math.round(breed_confidence * 100)} percent.`;
       if (breed_info?.funFact) {
         text += ` Fun fact: ${breed_info.funFact}`;
       }
@@ -124,12 +124,12 @@ export default function ResultCard({ result, imagePreview }) {
             <div className="mt-2">
               <div className="flex justify-between text-sm mb-1">
                 <span className="text-gray-500">{t('result.confidence')}</span>
-                <span className="font-medium text-gray-700">{animal_type_confidence}%</span>
+                <span className="font-medium text-gray-700">{(animal_type_confidence * 100).toFixed(1)}%</span>
               </div>
               <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
                 <motion.div
                   initial={{ width: 0 }}
-                  animate={{ width: `${animal_type_confidence}%` }}
+                  animate={{ width: `${animal_type_confidence * 100}%` }}
                   transition={{ duration: 1, ease: 'easeOut' }}
                   className="h-full bg-primary-500 rounded-full"
                 />
@@ -149,12 +149,12 @@ export default function ResultCard({ result, imagePreview }) {
             <div className="mt-2">
               <div className="flex justify-between text-sm mb-1">
                 <span className="text-primary-600">{t('result.confidence')}</span>
-                <span className="font-medium text-primary-700">{breed_confidence}%</span>
+                <span className="font-medium text-primary-700">{(breed_confidence * 100).toFixed(1)}%</span>
               </div>
               <div className="h-2 bg-primary-200 rounded-full overflow-hidden">
                 <motion.div
                   initial={{ width: 0 }}
-                  animate={{ width: `${breed_confidence}%` }}
+                  animate={{ width: `${breed_confidence * 100}%` }}
                   transition={{ duration: 1, ease: 'easeOut' }}
                   className="h-full bg-primary-600 rounded-full"
                 />
@@ -175,7 +175,7 @@ export default function ResultCard({ result, imagePreview }) {
                   {idx + 1}
                 </span>
                 <span className="flex-grow capitalize text-gray-700">{pred.breed.replace(/_/g, ' ')}</span>
-                <span className="text-sm font-medium text-gray-500">{pred.confidence}%</span>
+                <span className="text-sm font-medium text-gray-500">{(pred.confidence * 100).toFixed(2)}%</span>
               </div>
             ))}
           </div>

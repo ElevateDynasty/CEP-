@@ -107,7 +107,7 @@ class PredictView(views.APIView):
             breed_confidence=result['breed_confidence'],
             top_predictions=result['top_predictions'],
             image=image_file,
-            gradcam_image=result.get('gradcam_image', ''),
+            gradcam_image=result.get('gradcam_image') or '',
             gradcam_enabled=include_gradcam,
             processing_time_ms=result['processing_time_ms'],
             ip_address=self._get_client_ip(request),

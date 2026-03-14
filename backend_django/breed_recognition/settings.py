@@ -190,7 +190,7 @@ SPECTACULAR_SETTINGS = {
 }
 
 # ML Model Settings
-ML_MODELS_PATH = BASE_DIR.parent / 'backend' / 'ml_models'
+ML_MODELS_PATH = BASE_DIR.parent / 'models'
 BREED_DATA_PATH = BASE_DIR.parent / 'data' / 'breed_info.json'
 
 ML_SETTINGS = {

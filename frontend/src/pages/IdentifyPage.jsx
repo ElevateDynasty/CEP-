@@ -31,14 +31,14 @@ export default function IdentifyPage() {
       setResult({
         success: true,
         animal_type: 'cattle',
-        animal_type_confidence: 94.5,
+        animal_type_confidence: 0.945,
         breed: 'gir',
-        breed_confidence: 87.3,
+        breed_confidence: 0.873,
         breed_hindi: 'गिर',
         top_predictions: [
-          { breed: 'gir', confidence: 87.3 },
-          { breed: 'sahiwal', confidence: 8.2 },
-          { breed: 'red_sindhi', confidence: 2.1 }
+          { breed: 'gir', confidence: 0.873 },
+          { breed: 'sahiwal', confidence: 0.082 },
+          { breed: 'red_sindhi', confidence: 0.021 }
         ],
         gradcam_image: null,
         breed_info: {
